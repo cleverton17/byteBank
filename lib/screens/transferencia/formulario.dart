@@ -30,27 +30,27 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
         appBar: AppBar(
           title: Text(_tituloAppBar),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Editor(
-                controlador: _controladorCampoNumeroConta,
-                dica: _dicaCampoNumeroConta,
-                rotulo: _rotuloCampoNumeroConta,
-              ),
-              Editor(
-                dica: _dicaCampoValor,
-                controlador: _controladorCampoValor,
-                rotulo: _rotuloCampoValor,
-                icone: Icons.monetization_on,
-              ),
-              ElevatedButton(
-                child: Text(_textoBotaoConfirmar),
-                onPressed: () => _criaTransferencia(context),
-              ),
-            ],
-          ),
-        ));
+          body: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Editor(
+                  controlador: _controladorCampoNumeroConta,
+                  dica: _dicaCampoNumeroConta,
+                  rotulo: _rotuloCampoNumeroConta,
+                ),
+                Editor(
+                  dica: _dicaCampoValor,
+                  controlador: _controladorCampoValor,
+                  rotulo: _rotuloCampoValor,
+                  icone: Icons.monetization_on,
+                ),
+                ElevatedButton(
+                  child: Text(_textoBotaoConfirmar),
+                  onPressed: () => _criaTransferencia(context),
+                ),
+              ],
+            ),
+          ));
   }
 
   void _criaTransferencia(BuildContext context) {
